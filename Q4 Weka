@@ -1,0 +1,48 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.PrincipalComponents -R 0.95 -A 5
+Search:       weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1
+Relation:     iris
+Instances:    150
+Attributes:   5
+              sepallength
+              sepalwidth
+              petallength
+              petalwidth
+              class
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (unsupervised):
+	Principal Components Attribute Transformer
+
+Correlation matrix
+  1     -0.11   0.87   0.82 
+ -0.11   1     -0.42  -0.36 
+  0.87  -0.42   1      0.96 
+  0.82  -0.36   0.96   1    
+
+
+eigenvalue	proportion	cumulative
+  2.91082	  0.7277 	  0.7277 	-0.581petallength-0.566petalwidth-0.522sepallength+0.263sepalwidth
+  0.92122	  0.23031	  0.95801	0.926sepalwidth+0.372sepallength+0.065petalwidth+0.021petallength
+
+Eigenvectors
+ V1	 V2	
+-0.5224	 0.3723	sepallength
+ 0.2634	 0.9256	sepalwidth
+-0.5813	 0.0211	petallength
+-0.5656	 0.0654	petalwidth
+
+Ranked attributes:
+ 0.2723  1 -0.581petallength-0.566petalwidth-0.522sepallength+0.263sepalwidth
+ 0.042   2 0.926sepalwidth+0.372sepallength+0.065petalwidth+0.021petallength
+
+Selected attributes: 1,2 : 2
+
